@@ -1,0 +1,16 @@
+﻿@model SistemaEventosCorporativos.Models.Evento
+
+@{
+    ViewData["Title"] = "Excluir Evento";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h4>Você tem certeza que deseja excluir o evento "@Model.Nome"?</h4>
+<hr />
+
+<form asp-action="DeleteConfirmed">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Excluir</button>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Cancelar</a>
+</form>
